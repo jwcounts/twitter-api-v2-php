@@ -2,10 +2,10 @@
 
 ![PHP](https://img.shields.io/badge/PHP-v7.4+-828cb7.svg?style=flat-square&logo=php)
 [![Badge Twitter](https://img.shields.io/badge/Twitter%20API-v2-828cb7.svg?style=flat-square&logo=twitter&color=1DA1F2)](https://developer.twitter.com/en/docs/twitter-api)
-[![Run Tests](https://github.com/noweh/twitter-api-v2-php/actions/workflows/run-tests.yml/badge.svg)](https://github.com/noweh/twitter-api-v2-php/actions/workflows/run-tests.yml)
+[![Run Tests](https://github.com/noweh/twitter-api-v2-php/actions/workflows/run-tests.yml/badge.svg)](https://github.com/jwcounts/twitter-api-v2-php/actions/workflows/run-tests.yml)
 [![MIT Licensed](https://img.shields.io/github/license/noweh/twitter-api-v2-php)](licence.md)
-[![last version](https://img.shields.io/packagist/v/noweh/twitter-api-v2-php)](https://packagist.org/packages/noweh/twitter-api-v2-php)
-[![Downloads](https://img.shields.io/packagist/dt/noweh/twitter-api-v2-php)](https://packagist.org/packages/noweh/twitter-api-v2-php)
+[![last version](https://img.shields.io/packagist/v/noweh/twitter-api-v2-php)](https://packagist.org/packages/jwcounts/twitter-api-v2-php)
+[![Downloads](https://img.shields.io/packagist/dt/noweh/twitter-api-v2-php)](https://packagist.org/packages/jwcounts/twitter-api-v2-php)
 [![twitter](https://img.shields.io/twitter/follow/NowehJS?style=social)](https://x.com/NowehJS)
 
 Twitter API V2 is a PHP package which provides an easy and fast access to Twitter REST API for Version 2 endpoints.
@@ -65,13 +65,13 @@ Twitter API V2 is a PHP package which provides an easy and fast access to Twitte
 ## Installation
 To begin, you'll need to add the component to your `composer.json`
 ```shell
-composer require noweh/twitter-api-v2-php
+composer require jwcounts/twitter-api-v2-php
 ```
 After adding the component, update your packages using `composer update` or install them using `composer install`.
 
 ## Github Actions
 
-This repository uses [Github Actions](https://github.com/noweh/twitter-api-v2-php/actions) for each push/pull request, employing [PHPStan/PHPUnit](/.github/workflows/run-tests.yml).
+This repository uses [Github Actions](https://github.com/jwcounts/twitter-api-v2-php/actions) for each push/pull request, employing [PHPStan/PHPUnit](/.github/workflows/run-tests.yml).
 
 Consequently, with each valid push, a new Tweet is posted from the [Twitter test account](https://twitter.com/canWeDeploy/status/1538477133487644672).
 
@@ -88,7 +88,7 @@ Before anything else, you must follow [this tutorial](https://developer.twitter.
 ### Configuration setup
 Expected settings are as follows:
 ```php
-use Noweh\TwitterApi\Client;
+use Jwcounts\TwitterApi\Client;
 
 $settings = [
     'account_id' => 'YOUR_ACCOUNT_ID',
@@ -228,11 +228,11 @@ $return = $client->tweetLookup()
     ->addFilterOnUsernamesFrom([
         'twitterdev',
         'Noweh95'
-    ], \Noweh\TwitterApi\TweetLookup::OPERATORS['OR'])
+    ], \Jwcounts\TwitterApi\TweetLookup::OPERATORS['OR'])
     ->addFilterOnKeywordOrPhrase([
         'Dune',
         'DenisVilleneuve'
-    ], \Noweh\TwitterApi\TweetLookup::OPERATORS['AND'])
+    ], \Jwcounts\TwitterApi\TweetLookup::OPERATORS['AND'])
     ->addFilterOnLocales(['fr', 'en'])
     ->showUserDetails()
     ->performRequest()
@@ -376,7 +376,7 @@ You can specify the search mode as a second parameter (`Client::MODES['USERNAME'
 Example:
 ```php
 $return = $client->userLookup()
-    ->findByIdOrUsername('twitterdev', \Noweh\TwitterApi\UserLookup::MODES['USERNAME'])
+    ->findByIdOrUsername('twitterdev', \Jwcounts\TwitterApi\UserLookup::MODES['USERNAME'])
     ->performRequest()
 ;
 ```
