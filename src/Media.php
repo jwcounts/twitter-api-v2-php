@@ -1,6 +1,6 @@
 <?php
 
-namespace Noweh\TwitterApi;
+namespace Jwcounts\TwitterApi;
 
 use Exception;
 use GuzzleHttp\Client;
