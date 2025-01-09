@@ -1,5 +1,5 @@
 {
-  "name": "noweh/twitter-api-v2-php",
+  "name": "jwcounts/twitter-api-v2-php",
   "description": "This library provides methods for sending messages to Twitter and receiving statuses.",
   "keywords": ["twitter", "PHP", "API"],
   "minimum-stability": "stable",
@@ -19,7 +19,7 @@
     "ext-json": "*",
     "php": ">=7.4",
     "guzzlehttp/guzzle": "^7.5.0",
-    "guzzlehttp/oauth-subscriber": "^0.6.0"
+    "guzzlehttp/oauth-subscriber": ">0.6.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.6.3",
@@ -39,12 +39,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Noweh\\TwitterApi\\": "src/"
+      "Jwcounts\\TwitterApi\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Noweh\\TwitterApi\\Test\\": "test/"
+      "Jwcounts\\TwitterApi\\Test\\": "test/"
     }
   }
 }
